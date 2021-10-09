@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+#This is a simple script for the classic rock-paper-scissors game.
 
 print("""
 -------------------------------------------------
