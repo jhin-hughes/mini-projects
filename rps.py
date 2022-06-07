@@ -49,7 +49,7 @@ while(1 < 2):
 	elif opponentPick == "P" and userPick.upper() == "R":
 		print("Paper covers rock. Maybe next time, " + x + ".")
 	elif opponentPick == "S" and userPick.upper() == "P":
-		print("Scissors cut paper. You need more training, " +x + ".")
+		print("Scissors cut paper. You need more training, " + x + ".")
 	else:
 		print("Rock crushes scissors. Well played.")
 		
